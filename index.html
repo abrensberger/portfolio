@@ -1,0 +1,274 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Aaron Brensberger | Web Designer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="icon" type="image/png" href="images/system/logo.png">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.5.2.js"></script>
+		<script src="js/slideshow.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/jquery.nicescroll.plus.js"></script>
+		<!-- TOGGLER -->
+		<script>
+		$(function(){
+			$(".toggleContainer").hide();
+			$(".open").click(function() {
+				$(this).next('.toggleContainer').slideToggle();
+				if ($(this).is('.open')) {
+					$(this).removeClass('open').addClass('close');
+				}
+				else {
+					$(this).removeClass('close').addClass('open');
+				}
+			});
+		});
+		</script>
+		<!-- SMOOTH SCROLLING -->
+		<script>
+		$(document).ready(function() {
+			$("html").niceScroll({styler:"fb",cursorcolor:"#000"});
+		});
+		</script>
+		<!-- SMOOTH ANCHORING -->
+		<script>
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top}, 1300);
+			});
+		});
+		</script>
+		<!-- FADE INTO DIV -->
+		<script>
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				$('#home').css(opacity:0.5);
+			});
+		});
+		</script>
+		<!-- SLIDE LEFT -->
+		<script>
+		$(document).ready(function() {
+			$('#slideleft a').click(function() {
+				var $lefty = $(this).next();
+				$lefty.animate({
+					left: parseInt($lefty.css('left'),10) == 0 ?
+					-$lefty.outerWidth() :
+					0
+				});
+			});
+		});
+		</script>
+		<!-- Validate Form
+		<script>
+		function validateForm() {
+			var x = document.forms["contact"]["name"].value;
+			if (x==null || x=="") {
+				alert("Please enter a name");
+				return false;
+			}
+			var y = document.forms["contact"]["email"].value;
+			var atpos = y.indexOf("@");
+			var dotpos = y.lastIndexOf(".");
+			if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=y.length) {
+					alert("Please enter a valid e-mail address");
+					return false;
+				}
+				var z = document.forms["contact"]["message"].value;
+				if (z==null || z=="") {
+					alert("Please enter a message");
+					return false;
+				}
+			}
+			</script>
+			-->
+		</head>
+		<body>
+			<div class="wrapper">
+				<div class="header">
+					<div class="logo">
+						<a class="scroll" href="#intro"><h1 class="fade">Aaron Brensberger</h1></a>
+					</div>
+					<div class="navigation">
+						<ul>
+							<li><a class="scroll fade" href="#about">About</a></li>
+							<li><a class="scroll fade" href="#portfolio">My Work</a></li>
+							<li><a class="scroll fade" href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="content">
+					<div class="contentContainer" id="intro">
+						<div class="contentBlock">
+							<h1>Aaron Brensberger</h1>
+						</div>
+					</div>
+					<div class="strip">
+						<div class="circle">
+							<a class="scroll" href="#about"><div class="arrowDown translateY fade"></div></a>
+						</div>
+					</div>
+					<div class="contentContainer" id="about">
+						<div class="contentBlock">
+							<h1>About Me</h1>
+							<p>My name is Aaron Brensberger and I am a front-end web designer from Brooklyn, New York. I've been designing websites and working with HTML and CSS for 13 years.</p>
+							<p>I strive to develop clean, reusable code that is both innovative and adapative, every time I undertake a project.</p>
+						</div>
+						<div class="contentBlock">
+							<div class="toggle">
+								<h3>Learn More</h3>
+								<div class="open fade"></div>
+								<div class="toggleContainer">
+									<div class="leftColumn">
+										<h3>More Things I Do:</h3>
+										<ul>
+											<li>Design websites through a cyclic workflow</li>
+											<li>Hand code HTML, XHTML, XML and CSS into Ektron, proprietary CMSs, and Drupal</li>
+											<li>Revamp hundreds of websites under the Bootstrap framework</li>
+											<li>Frequently innovate competitive designs which repeatedly result in higher sales</li>
+											<li>Create custom web pages from PDF files</li>
+											<li>Design branding banners, graphics and logos</li>
+											<li>Creat multiple A/B split tests for websites using VWO service</li>
+											<li>Design new templates for departmental-wide overhauls</li>
+											<li>Manually convert hundreds of webpages under an old template to one of the new templates</li>
+											<li>Consistently create custom pages under the new templates</li>
+											<li>Consult with academic liaisons to discuss further designs in department-wide development</li>
+											<li>Complete special physical tasks and projects to bring new content to fruition on website</li>
+											<li>Design wireframes and mockups in Photoshop</li>
+											<li>Meet with clients, discussing projects, and implementing the final design</li>
+											<li>Create, edit, and organize site’s entire file and graphic libraries manually</li>
+											<li>Perform scheduled updates to the site including code and graphic changes</li>
+										</ul>
+									</div>
+									<div class="rightColumn">
+										<h3>More Things I've Worked With:</h3>
+										<ul>
+											<li>HTML, CSS, JavaScript, PHP, jQuery, ASPX</li>
+											<li>Adobe Photoshop, GIMP</li>
+											<li>Microsoft Word, Excel, PowerPoint, Access, FrontPage</li>
+											<li>Mac OS and Windows</li>
+											<li>Bootstrap framework</li>
+											<li>Sublime Text</li>
+											<li>Ektron, Drupal</li>
+											<li>Amazon Web Services (AWS), Citrix</li>
+											<li>Zendesk ticketing system</li>
+											<li>VWO A/B Split Tests</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strip">
+						<div class="circle">
+							<a class="scroll" href="#portfolio"><div class="arrowDown translateY fade"></div></a>
+						</div>
+					</div>
+					<div class="contentContainer" id="portfolio">
+						<h1>Work Highlights</h1>
+						<h2>Project Samples &amp; Online Portfolio</h2>
+						<div class="contentBlock full">
+							<div class="projectRight">
+								<a href="tradetech.html">
+									<img src="images/portfolio/tradetech.png" alt="tradetech">
+								</a>
+								<div class="projectInfo">
+									<h3>TradeTech</h3>
+									<p><a class="projectButton fade" href="tradetech.html">&nbsp;View Project&nbsp;</a></p>
+									<p><a class="projectButton fade" href="http://tradetecheu.wbresearch.com/" target="_blank">View Full Site</a></p>
+									<div class="circle half"><a href="tradetech.html"><div class="arrowRight half translateX fade"></div></a></div>
+								</div>
+							</div>
+							<div class="projectLeft">
+								<div class="projectInfo">
+									<h3>Smart Borders</h3>
+									<p><a class="projectButton fade" href="smartborders.html">&nbsp;View Project&nbsp;</a></p>
+									<p><a class="projectButton fade" href="http://smartborders.wbresearch.com/" target="_blank">View Full Site</a></p>
+									<div class="circle half"><a href="smartborders.html"><div class="arrowRight half translateX fade"></div></a></div>
+								</div>
+								<a href="smartborders.html">
+									<img src="images/portfolio/smartborders.png" alt="smartborders">
+								</a>
+							</div>
+							<div class="projectRight">
+								<a href="citytech.html">
+									<img src="images/portfolio/citytech.png" alt="citytech">
+								</a>
+								<div class="projectInfo">
+									<h3>CityTech</h3>
+									<p><a class="projectButton fade" href="citytech.html">&nbsp;View Project&nbsp;</a></p>
+									<p><a class="projectButton fade" href="http://www.citytech.cuny.edu/" target="_blank">View Full Site</a></p>
+									<div class="circle half"><a href="citytech.html"><div class="arrowRight half translateX fade"></div></a></div>
+								</div>
+							</div>
+							<div class="projectLeft">
+								<div class="projectInfo">
+									<h3>Oh-Marisha</h3>
+									<p><a class="projectButton fade" href="ohmarisha.html">&nbsp;View Project&nbsp;</a></p>
+									<p><a class="projectButton fade" href="http://oh-marisha.com/" target="_blank">View Full Site</a></p>
+									<div class="circle half"><a href="ohmarisha.html"><div class="arrowRight half translateX fade"></div></a></div>
+								</div>
+								<a href="ohmarisha.html">
+									<img src="images/portfolio/ohmarisha.png" alt="ohmarisha">
+								</a>
+							</div>
+						</div>
+						<div class="contentBlock">
+							<div class="toggle">
+								<h3>View All Projects</h3>
+								<div class="open fade"></div>
+								<div class="toggleContainer">
+									<div class="projectSmall fade">
+										<a href="ohmarisha.html">
+											<img src="images/portfolio/ohmarisha_small.png" alt="ohmarisha_small">
+											<h4>Oh-Marisha</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="nycpedals.html">
+											<img src="images/portfolio/nycpedals_small.png" alt="nycpedals_small">
+											<h4>NYCPedals</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="citytech.html">
+											<img src="images/portfolio/citytech_small.png" alt="citytech_small">
+											<h4>CityTech</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="smartborders.html">
+											<img src="images/portfolio/smartborders_small.png" alt="smartborders_small">
+											<h4>Smart Borders</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="tradetech.html">
+											<img src="images/portfolio/tradetech_small.png" alt="tradetech_small">
+											<h4>TradeTech</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strip">
+						<div class="circle">
+							<a class="scroll" href="#contact"><div class="arrowDown translateY fade"></div></a>
+						</div>
+					</div>
+					<div class="contentContainer" id="contact">
+						<div class="contentBlock">
+							<h1>Contact Me</h1>
+							<h2>Want To Get In Touch?</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
