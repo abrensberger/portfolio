@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="icon" type="image/png" href="images/system/logo.png">
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.5.2.js"></script>
@@ -13,8 +13,8 @@
 		<script src="js/jquery.easing.1.3.js"></script>
 		<script src="js/jquery.nicescroll.min.js"></script>
 		<script src="js/jquery.nicescroll.plus.js"></script>
-		<!-- TOGGLER -->
 		<script>
+		/* TOGGLER */
 		$(function(){
 			$(".toggleContainer").hide();
 			$(".open").click(function() {
@@ -28,14 +28,14 @@
 			});
 		});
 		</script>
-		<!-- SMOOTH SCROLLING -->
 		<script>
+		/* SMOOTH SCROLLING */
 		$(document).ready(function() {
 			$("html").niceScroll({styler:"fb",cursorcolor:"#000"});
 		});
 		</script>
-		<!-- SMOOTH ANCHORING -->
 		<script>
+		/* SMOOTH ANCHORING */
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){
 				event.preventDefault();
@@ -43,16 +43,16 @@
 			});
 		});
 		</script>
-		<!-- FADE INTO DIV -->
 		<script>
+		/* FADE INTO DIV */
 		$(document).ready(function(){
 			$(window).scroll(function(){
 				$('#home').css(opacity:0.5);
 			});
 		});
 		</script>
-		<!-- SLIDE LEFT -->
 		<script>
+		/* SLIDE LEFT */
 		$(document).ready(function() {
 			$('#slideleft a').click(function() {
 				var $lefty = $(this).next();
@@ -64,8 +64,8 @@
 			});
 		});
 		</script>
-		<!-- Validate Form
 		<script>
+		/* VALIDATE FORM */
 		function validateForm() {
 			var x = document.forms["contact"]["name"].value;
 			if (x==null || x=="") {
@@ -76,36 +76,200 @@
 			var atpos = y.indexOf("@");
 			var dotpos = y.lastIndexOf(".");
 			if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=y.length) {
-					alert("Please enter a valid e-mail address");
-					return false;
-				}
-				var z = document.forms["contact"]["message"].value;
-				if (z==null || z=="") {
-					alert("Please enter a message");
-					return false;
-				}
-			}
+								alert("Please enter a valid e-mail address");
+								return false;
+							}
+							var z = document.forms["contact"]["message"].value;
+							if (z==null || z=="") {
+								alert("Please enter a message");
+								return false;
+							}
+						}
 			</script>
-			-->
 		</head>
 		<body>
 			<div class="wrapper">
 				<div class="header">
 					<div class="logo">
-						<a class="scroll" href="#intro"><h1 class="fade">Aaron Brensberger</h1></a>
+						<a class="scroll" href="#home"><img src="images/system/logo.png"></a>
 					</div>
 					<div class="navigation">
 						<ul>
+							<li><a class="scroll fade" href="#home">Home</a></li>
+							<li><a class="scroll fade" href="#work">My Work</a></li>
 							<li><a class="scroll fade" href="#about">About</a></li>
-							<li><a class="scroll fade" href="#portfolio">My Work</a></li>
-							<li><a class="scroll fade" href="#contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="content">
-					<div class="contentContainer" id="intro">
+					<div class="contentContainer" id="home">
 						<div class="contentBlock">
 							<h1>Aaron Brensberger</h1>
+						</div>
+					</div>
+					<div class="strip">
+						<div class="circle">
+							<a class="scroll" href="#work"><div class="arrowDown translateY fade"></div></a>
+						</div>
+					</div>
+					<div class="contentContainer" id="work">
+						<h1>Work Highlights</h1>
+						<h2>Project Samples &amp; Online projects</h2>
+						<div class="contentBlock full">
+							<div class="projectRight">
+								<a href="https://www.wbresearch.com/" target="_blank">
+									<img src="images/projects/wbr.png">
+								</a>
+								<div class="projectInfo">
+									<h3>Worldwide Business Research</h3>
+									<p><a class="projectButton fade" href="https://www.wbresearch.com/" target="_blank">View Site</a></p>
+								</div>
+							</div>
+							<div class="projectLeft">
+								<div class="projectInfo">
+									<h3>New York City College of Technology</h3>
+									<p><a class="projectButton fade" href="http://www.citytech.cuny.edu/" target="_blank">View Site</a></p>
+								</div>
+								<a href="http://www.citytech.cuny.edu/" target="_blank">
+									<img src="images/projects/citytech.png">
+								</a>
+							</div>
+						</div>
+						<div class="contentBlock full">
+							<div class="projectRight">
+								<a href="https://www.oh-marisha.com/" target="_blank">
+									<img src="images/projects/ohmarisha.png">
+								</a>
+								<div class="projectInfo">
+									<h3>Oh-Marisha</h3>
+									<p><a class="projectButton fade" href="https://www.oh-marisha.com/" target="_blank">View Site</a></p>
+								</div>
+							</div>
+							<div class="projectLeft">
+								<div class="projectInfo">
+									<h3>NYC Pedals</h3>
+									<p><a class="projectButton fade" href="http://www.nycpedals.com/" target="_blank">View Site</a></p>
+								</div>
+								<a href="http://www.nycpedals.com/" target="_blank">
+									<img src="images/projects/nycpedals.png">
+								</a>
+							</div>
+						</div>
+						<div class="contentBlock">
+							<div class="toggle">
+								<h3>View All Projects</h3>
+								<div class="open fade"></div>
+								<div class="toggleContainer">
+									<div class="projectSmall fade">
+										<a href="https://b2bmarketingeast.wbresearch.com/" target="_blank">
+											<img src="images/projects/b2bmarketing.png">
+											<h4>B2B Marketing</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://bionetwork.wbresearch.com/" target="_blank">
+											<img src="images/projects/bionetwork.png">
+											<h4>Bio Network</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://consumerreturns.wbresearch.com/" target="_blank">
+											<img src="images/projects/consumerreturns.png">
+											<h4>Consumer Returns</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://digitaltravel.wbresearch.com/" target="_blank">
+											<img src="images/projects/digitaltravel.png">
+											<h4>Digital Travel</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://fieldservicemedical.wbresearch.com/" target="_blank">
+											<img src="images/projects/fieldservicemedical.png">
+											<h4>Field Service Medical</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://hcmdusa.wbresearch.com/" target="_blank">
+											<img src="images/projects/hcmdusa.png">
+											<h4>HCMD USA</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://logimedusa.wbresearch.com/" target="_blank">
+											<img src="images/projects/logimedusa.png">
+											<h4>LogiMed USA</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://mobileshopping.wbresearch.com/" target="_blank">
+											<img src="images/projects/mobileshopping.png">
+											<h4>Mobile Shopping</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://netfinance.wbresearch.com/" target="_blank">
+											<img src="images/projects/netfinance.png">
+											<h4>Net Finance</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://procurecondm.wbresearch.com/" target="_blank">
+											<img src="images/projects/procurecondm.png">
+											<h4>ProcureCon DM</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://procureconmfg.wbresearch.com/" target="_blank">
+											<img src="images/projects/procureconmfg.png">
+											<h4>ProcureCon MFG</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://safecitiesasia.wbresearch.com/" target="_blank">
+											<img src="images/projects/safecitiesasia.png">
+											<h4>Safe Cities Asia</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://smartborders.wbresearch.com/" target="_blank">
+											<img src="images/projects/smartborders.png">
+											<h4>Smart Borders</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://tradetecheu.wbresearch.com/" target="_blank">
+											<img src="images/projects/tradetech.png">
+											<h4>Trade Tech</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://tradingarchitecture.wbresearch.com/" target="_blank">
+											<img src="images/projects/tradingarchitecture.png">
+											<h4>Trading Architecture</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="http://www.citytech.cuny.edu/" target="_blank">
+											<img src="images/projects/citytech_small.png">
+											<h4>New York City College of Technology</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="https://www.oh-marisha.com/" target="_blank">
+											<img src="images/projects/ohmarisha_small.png">
+											<h4>Oh-Marisha</h4>
+										</a>
+									</div>
+									<div class="projectSmall fade">
+										<a href="http://www.nycpedals.com/" target="_blank">
+											<img src="images/projects/nycpedals_small.png">
+											<h4>NYCPedals</h4>
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="strip">
@@ -116,8 +280,9 @@
 					<div class="contentContainer" id="about">
 						<div class="contentBlock">
 							<h1>About Me</h1>
+							<h2>Web Designer / Developer</h2>
 							<p>My name is Aaron Brensberger and I am a front-end web designer from Brooklyn, New York. I've been designing websites and working with HTML and CSS for 13 years.</p>
-							<p>I strive to develop clean, reusable code that is both innovative and adapative, every time I undertake a project.</p>
+							<p>I strive to develop clean, reusable code that is both innovative and adaptive, every time I undertake a project.</p>
 						</div>
 						<div class="contentBlock">
 							<div class="toggle">
@@ -133,14 +298,9 @@
 											<li>Frequently innovate competitive designs which repeatedly result in higher sales</li>
 											<li>Create custom web pages from PDF files</li>
 											<li>Design branding banners, graphics and logos</li>
-											<li>Creat multiple A/B split tests for websites using VWO service</li>
+											<li>Create A/B split tests for websites using VWO service</li>
 											<li>Design new templates for departmental-wide overhauls</li>
-											<li>Manually convert hundreds of webpages under an old template to one of the new templates</li>
-											<li>Consistently create custom pages under the new templates</li>
-											<li>Consult with academic liaisons to discuss further designs in department-wide development</li>
-											<li>Complete special physical tasks and projects to bring new content to fruition on website</li>
 											<li>Design wireframes and mockups in Photoshop</li>
-											<li>Meet with clients, discussing projects, and implementing the final design</li>
 											<li>Create, edit, and organize site’s entire file and graphic libraries manually</li>
 											<li>Perform scheduled updates to the site including code and graphic changes</li>
 										</ul>
@@ -148,7 +308,6 @@
 									<div class="rightColumn">
 										<h3>More Things I've Worked With:</h3>
 										<ul>
-											<li>HTML, CSS, JavaScript, PHP, jQuery, ASPX</li>
 											<li>Adobe Photoshop, GIMP</li>
 											<li>Microsoft Word, Excel, PowerPoint, Access, FrontPage</li>
 											<li>Mac OS and Windows</li>
@@ -164,109 +323,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="strip">
-						<div class="circle">
-							<a class="scroll" href="#portfolio"><div class="arrowDown translateY fade"></div></a>
-						</div>
-					</div>
-					<div class="contentContainer" id="portfolio">
-						<h1>Work Highlights</h1>
-						<h2>Project Samples &amp; Online Portfolio</h2>
-						<div class="contentBlock full">
-							<div class="projectRight">
-								<a href="tradetech.html">
-									<img src="images/portfolio/tradetech.png" alt="tradetech">
-								</a>
-								<div class="projectInfo">
-									<h3>TradeTech</h3>
-									<p><a class="projectButton fade" href="tradetech.html">&nbsp;View Project&nbsp;</a></p>
-									<p><a class="projectButton fade" href="http://tradetecheu.wbresearch.com/" target="_blank">View Full Site</a></p>
-									<div class="circle half"><a href="tradetech.html"><div class="arrowRight half translateX fade"></div></a></div>
-								</div>
-							</div>
-							<div class="projectLeft">
-								<div class="projectInfo">
-									<h3>Smart Borders</h3>
-									<p><a class="projectButton fade" href="smartborders.html">&nbsp;View Project&nbsp;</a></p>
-									<p><a class="projectButton fade" href="http://smartborders.wbresearch.com/" target="_blank">View Full Site</a></p>
-									<div class="circle half"><a href="smartborders.html"><div class="arrowRight half translateX fade"></div></a></div>
-								</div>
-								<a href="smartborders.html">
-									<img src="images/portfolio/smartborders.png" alt="smartborders">
-								</a>
-							</div>
-							<div class="projectRight">
-								<a href="citytech.html">
-									<img src="images/portfolio/citytech.png" alt="citytech">
-								</a>
-								<div class="projectInfo">
-									<h3>CityTech</h3>
-									<p><a class="projectButton fade" href="citytech.html">&nbsp;View Project&nbsp;</a></p>
-									<p><a class="projectButton fade" href="http://www.citytech.cuny.edu/" target="_blank">View Full Site</a></p>
-									<div class="circle half"><a href="citytech.html"><div class="arrowRight half translateX fade"></div></a></div>
-								</div>
-							</div>
-							<div class="projectLeft">
-								<div class="projectInfo">
-									<h3>Oh-Marisha</h3>
-									<p><a class="projectButton fade" href="ohmarisha.html">&nbsp;View Project&nbsp;</a></p>
-									<p><a class="projectButton fade" href="http://oh-marisha.com/" target="_blank">View Full Site</a></p>
-									<div class="circle half"><a href="ohmarisha.html"><div class="arrowRight half translateX fade"></div></a></div>
-								</div>
-								<a href="ohmarisha.html">
-									<img src="images/portfolio/ohmarisha.png" alt="ohmarisha">
-								</a>
-							</div>
-						</div>
-						<div class="contentBlock">
-							<div class="toggle">
-								<h3>View All Projects</h3>
-								<div class="open fade"></div>
-								<div class="toggleContainer">
-									<div class="projectSmall fade">
-										<a href="ohmarisha.html">
-											<img src="images/portfolio/ohmarisha_small.png" alt="ohmarisha_small">
-											<h4>Oh-Marisha</h4>
-										</a>
-									</div>
-									<div class="projectSmall fade">
-										<a href="nycpedals.html">
-											<img src="images/portfolio/nycpedals_small.png" alt="nycpedals_small">
-											<h4>NYCPedals</h4>
-										</a>
-									</div>
-									<div class="projectSmall fade">
-										<a href="citytech.html">
-											<img src="images/portfolio/citytech_small.png" alt="citytech_small">
-											<h4>CityTech</h4>
-										</a>
-									</div>
-									<div class="projectSmall fade">
-										<a href="smartborders.html">
-											<img src="images/portfolio/smartborders_small.png" alt="smartborders_small">
-											<h4>Smart Borders</h4>
-										</a>
-									</div>
-									<div class="projectSmall fade">
-										<a href="tradetech.html">
-											<img src="images/portfolio/tradetech_small.png" alt="tradetech_small">
-											<h4>TradeTech</h4>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="strip">
-						<div class="circle">
-							<a class="scroll" href="#contact"><div class="arrowDown translateY fade"></div></a>
-						</div>
-					</div>
-					<div class="contentContainer" id="contact">
-						<div class="contentBlock">
-							<h1>Contact Me</h1>
-							<h2>Want To Get In Touch?</h2>
-						</div>
+				</div>
+				<div class="footer">
+					<div class="footerContainer">
+						<p>© 2020 Aaron Brensberger</p>
 					</div>
 				</div>
 			</div>
